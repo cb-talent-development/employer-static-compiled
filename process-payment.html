@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <!-- Responsive/Mobile Content Controls -->
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
+    <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
+    <!-- placeholder -->
+    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Checkout | CareerBuilder</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/stylesheets/site-6fe0638b.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='process-payment base-background'>
+    <header class='top-bar'>
+      <div class='top-bar__logo'>
+        <a href='/'>
+          <!-- / low-fi image of logo for positioning, needs to be updated -->
+          <img src='assets/images/placeholder-logo-e2d254a1.png'>
+        </a>
+      </div>
+      <div class='top-bar__helper-text text--white text--top-bar-helper medium-screen-up'>
+        <div class='email-us-link'>
+          Need help? Call
+          <a href='#unknown-link'>800-891-8880</a>
+          or
+          <a href='#email-us-link' id='email-us-link'>Email Us</a>
+        </div>
+      </div>
+    </header>
+    <!-- thin-header -->
+    
+    <!-- header -->
+    <header class='header header--thin '>
+      <div class='container'>
+        <div class='header__subnav medium-screen-up'></div>
+        <h1 class='header__headline text--headline text--white'>
+          Checkout
+        </h1>
+        <!-- header__progress-bar -->
+        <!-- / WORK IN PROGRESS -->
+        <!-- / Final form will be clickable, text and circle will be hot area -->
+        <div class='header__progress-bar box--progress-bar text--white large-screen-only'>
+          <ul>
+            <!-- / Displays line behind circles -->
+            <div class='box--progress-bar__line'></div>
+            <li class='box--progress-bar--completed'>
+              <!-- / STEP NUMBER -->
+              1
+              <!-- / STEP LABEL -->
+              <label>Summary</label>
+            </li>
+            <li class='box--progress-bar--current'>
+              2
+              <label>Sign In</label>
+            </li>
+            <li>
+              3
+              <label>Payment</label>
+            </li>
+            <li>
+              4
+              <label>Confirmation</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class='container text--body'>
+      <!-- small-medium page order -->
+      <section class='columns-12 medium-screen-down checkout-summary'>
+        <!-- summary box -->
+        <!-- headline -->
+        <div class='box--pop-out box--pop-out__top'>
+          <h2 class='text--headline-2 alpha'>
+            Order Summary
+          </h2>
+        </div>
+        <div class='box--pop-out box--pop-out__bottom'>
+          <!-- item -->
+          <!-- / THIS ITEM FOR STATIC DEMO, CAN BE REMOVED -->
+          <div class='cart__row cart__row--tight'>
+            <div class='cart__cell columns-8 alpha'>
+              US City Priority Job Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              2
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              $99.98
+            </div>
+          </div>
+          <!-- item -->
+          <!-- / ADD DIVIDER CLASS box--divider-bottom TO LAST cart__row IN LIST -->
+          <div class='cart__row cart__row--tight box--divider-bottom'>
+            <div class='cart__cell columns-8 alpha'>
+              <!-- / ITEM TITLE -->
+              Money Jobs Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              <!-- / ITEM COUNT # -->
+              1
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              <!-- / ITEM COUNT * PRICE -->
+              $9,999.99
+            </div>
+          </div>
+          <!-- subtotals -->
+          <div class='cart__row cart__row--tight checkout-summary__subtotal-box'>
+            <div class='cart__cell columns-6 alpha'>
+              Subtotal:
+              <br>Estimated Tax:</br>
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / SUBTOTAL # -->
+              $99,999.98
+              <!-- / TAX # -->
+              <br>$99.99</br>
+            </div>
+          </div>
+          <!-- total -->
+          <div class='cart__row cart__row--tight text--larger'>
+            <div class='cart__cell columns-6 alpha'>
+              Order Total:
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / ORDER TOTAL # -->
+              $999,999.99
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='half-page-large'>
+        <form class='form--large'>
+          <!-- / Use div to indicate new row. Class "clear-fix" if required. -->
+          <div>
+            <h2 class='text--accent text--headline-2 alpha'>
+              <span class='box--circle-text'>
+                <span>1</span>
+              </span>
+              User Information
+            </h2>
+          </div>
+          <div>
+            <label class='columns-5'>
+              First Name
+              <br>
+              <input type='text'>
+            </label>
+            <label class='columns-6 shift-1'>
+              Last Name
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label>
+              Email Address
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label class='columns-12 omega'>
+              Your role in hiring process
+              <span class='text--ghost'>
+                (optional)
+              </span>
+              <br>
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <!-- / allows non-answer after click -->
+                <option value=''></option>
+                <option value='recruiter'>Recruiter</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <h2 class='text--accent text--headline-2'>
+              <span class='box--circle-text'>
+                <span>2</span>
+              </span>
+              Company Information
+            </h2>
+          </div>
+          <div>
+            <label>
+              Company Name
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label>
+              Company Address
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label>
+              Country
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label class='columns-6'>
+              City
+              <br>
+              <input type='text'>
+            </label>
+            <label class='columns-3'>
+              State
+              <br>
+              <select></select>
+            </label>
+            <label class='columns-3'>
+              Zip code
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div class='box--divider-bottom columns-12' style='margin-bottom: 32px;'></div>
+          <div>
+            <label class='columns-12 alpha'>
+              Industry
+              <br>
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <option value='recruiter'>Online Advertising</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label class='columns-5'>
+              Number of Employees
+              <br>
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <option value='recruiter'>100</option>
+              </select>
+            </label>
+            <label class='columns-6 shift-1'>
+              Annual Revenue
+              <br>
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <option value='recruiter'>100</option>
+              </select>
+            </label>
+          </div>
+          <div class='columns-12 omega'>
+            <label class='columns-5'>
+              # of Locations
+              <span class='text--ghost'>Optional</span>
+              <br>
+              <input type='text'>
+            </label>
+            <label class='columns-6 shift-1'>
+              Company Phone
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <h2 class='text--accent text--headline-2 alpha'>
+              <span class='box--circle-text'>
+                <span>3</span>
+              </span>
+              Payment Information
+            </h2>
+          </div>
+          <div>
+            <label class='columns-4'>
+              Payment Type
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <option value='recruiter'>100</option>
+              </select>
+            </label>
+            <div class='columns-7 shift-1'>
+              <img src='assets/images/icon--credit-cards-30e11717.png' style='position: relative; top: 25px;'>
+            </div>
+          </div>
+          <div>
+            <label class='columns-12'>
+              Cardholder's Name
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label class='columns-7'>
+              Card Number
+              <br>
+              <input type='text'>
+            </label>
+            <label class='columns-4 shift-1'>
+              Expiration Date
+              <select>
+                <option selected style='display: none;' value=''>
+                  Month
+                </option>
+                <option value='january'>January</option>
+              </select>
+              <select>
+                <option selected style='display: none;' value=''>
+                  Year
+                </option>
+                <option value='2015'>2015</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label class='columns-3'>
+              Security Code
+              <br>
+              <input type='password'>
+            </label>
+            <div class='columns-6'>
+              <a class='text--smaller' href='#security-code' style='position: relative; top: 30px;'>
+                What is this?
+              </a>
+            </div>
+          </div>
+          <div class='form--large__divider-line box--divider-bottom'></div>
+          <div>
+            <label class='columns-12 form--large__trailing-label alpha'>
+              <input type='checkbox'>
+              <span class='text--thin'>Use Company Address (From Above)</span>
+            </label>
+          </div>
+          <div>
+            <label class='columns-12'>
+              Billing Address 1
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label class='columns-12'>
+              Billing Address 2
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div>
+            <label class='columns-12'>
+              Country
+              <br>
+              <select>
+                <option selected style='display: none;' value=''>
+                  --- Select One ---
+                </option>
+                <option value='Bolivia'>Bolivia</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label class='columns-6'>
+              City
+              <br>
+              <input type='text'>
+            </label>
+            <label class='columns-3'>
+              State
+              <br>
+              <select></select>
+            </label>
+            <label class='columns-3 omega'>
+              Zip code
+              <br>
+              <input type='text'>
+            </label>
+          </div>
+          <div class='columns-12'>
+            <h3 class='text--headline-3'>
+              Accept Terms and Conditions
+            </h3>
+          </div>
+          <div>
+            <label class='columns-12 form--large__trailing-label alpha omega'>
+              <input type='checkbox'>
+              <span class='text--thin'>
+                I agree to CareerBuilder's
+                <a href='#terms'>Terms and Conditions</a>
+              </span>
+            </label>
+          </div>
+          <div class='columns-12'>
+            <submit class='button button--primary'>
+              Complete Purchase
+            </submit>
+          </div>
+        </form>
+      </section>
+      <!-- large screen page order -->
+      <section class='half-page-large large-screen-only checkout-summary'>
+        <!-- summary box -->
+        <!-- headline -->
+        <div class='box--pop-out box--pop-out__top'>
+          <h2 class='text--headline-2 alpha'>
+            Order Summary
+          </h2>
+        </div>
+        <div class='box--pop-out box--pop-out__bottom'>
+          <!-- item -->
+          <!-- / THIS ITEM FOR STATIC DEMO, CAN BE REMOVED -->
+          <div class='cart__row cart__row--tight'>
+            <div class='cart__cell columns-8 alpha'>
+              US City Priority Job Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              2
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              $99.98
+            </div>
+          </div>
+          <!-- item -->
+          <!-- / ADD DIVIDER CLASS box--divider-bottom TO LAST cart__row IN LIST -->
+          <div class='cart__row cart__row--tight box--divider-bottom'>
+            <div class='cart__cell columns-8 alpha'>
+              <!-- / ITEM TITLE -->
+              Money Jobs Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              <!-- / ITEM COUNT # -->
+              1
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              <!-- / ITEM COUNT * PRICE -->
+              $9,999.99
+            </div>
+          </div>
+          <!-- subtotals -->
+          <div class='cart__row cart__row--tight checkout-summary__subtotal-box'>
+            <div class='cart__cell columns-6 alpha'>
+              Subtotal:
+              <br>Estimated Tax:</br>
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / SUBTOTAL # -->
+              $99,999.98
+              <!-- / TAX # -->
+              <br>$99.99</br>
+            </div>
+          </div>
+          <!-- total -->
+          <div class='cart__row cart__row--tight text--larger'>
+            <div class='cart__cell columns-6 alpha'>
+              Order Total:
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / ORDER TOTAL # -->
+              $999,999.99
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- global footer -->
+    <footer class='footer container text--body large-screen-only'>
+      <div class='footer__subnav text--subnav'>
+        <ul>
+          <li>
+            <a href='#subnav'>
+              Help
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Security & Privacy
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Advertise With Us
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Partners & Affiliates
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='footer__logo-row'>
+        <div class='footer__logo'>
+          LOGO
+        </div>
+        <div class='footer__share-links footer__subnav text--subnav'>
+          <ul>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascripts/site-71d05b95.js" type="text/javascript"></script>
+  </body>
+</html>

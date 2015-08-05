@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <!-- Responsive/Mobile Content Controls -->
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
+    <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
+    <!-- placeholder -->
+    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Order Confirmation | CareerBuilder</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/stylesheets/site-6fe0638b.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='order-confirmation base-background'>
+    <header class='top-bar'>
+      <div class='top-bar__logo'>
+        <a href='/'>
+          <!-- / low-fi image of logo for positioning, needs to be updated -->
+          <img src='assets/images/placeholder-logo-e2d254a1.png'>
+        </a>
+      </div>
+      <nav class='top-bar__links text--white text--top-bar-link medium-screen-up'>
+        <ul>
+          <a href='#account'>
+            <li>
+              <img src='assets/images/icon--account-8b7208ff.png'>
+              My Account
+            </li>
+          </a>
+          <a href='#cart'>
+            <li>
+              <img src='assets/images/icon--cart-69058b39.png'>
+              $1337.00 Cart
+            </li>
+          </a>
+          <a href='#contact'>
+            <li>
+              Contact Us
+            </li>
+          </a>
+        </ul>
+      </nav>
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <img src='assets/images/icon--mobile-menu-8d85d6da.png'>
+      </nav>
+    </header>
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- thin-header -->
+    
+    <!-- header -->
+    <header class='header header--thin '>
+      <div class='container'>
+        <div class='header__subnav medium-screen-up'></div>
+        <h1 class='header__headline text--headline text--white'>
+          Order Confirmation
+        </h1>
+        <!-- header__progress-bar -->
+        <!-- / WORK IN PROGRESS -->
+        <!-- / Final form will be clickable, text and circle will be hot area -->
+        <div class='header__progress-bar box--progress-bar text--white large-screen-only'>
+          <ul>
+            <!-- / Displays line behind circles -->
+            <div class='box--progress-bar__line'></div>
+            <li class='box--progress-bar--completed'>
+              <!-- / STEP NUMBER -->
+              1
+              <!-- / STEP LABEL -->
+              <label>Summary</label>
+            </li>
+            <li class='box--progress-bar--current'>
+              2
+              <label>Sign In</label>
+            </li>
+            <li>
+              3
+              <label>Payment</label>
+            </li>
+            <li>
+              4
+              <label>Confirmation</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class='container text--body'>
+      <section class='columns-12 medium-screen-down checkout-summary'>
+        <div class='confirmation__message'>
+          <!-- A confirmation message displayed after ordering -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec sagittis massa, at varius ligula. In ultrices a lectus eleifend dignissim. Aenean ac euismod risus. Vestibulum feugiat leo eget lacus fringilla, non cursus risus molestie. Proin accumsan lorem nec tincidunt suscipit. Duis in nisl vel lectus convallis accumsan. Morbi in dignissim felis, quis mattis ipsum. Mauris pulvinar sem felis, nec porta nulla pellentesque quis. Curabitur sit amet convallis libero. Proin at finibus sapien. Integer in purus laoreet, iaculis erat quis, ornare neque. Nunc at scelerisque ipsum, volutpat venenatis erat.
+        </div>
+        <a class='button button--primary confirmation__button' href='#post-job'>
+          Post Your Job Now
+        </a>
+        <!-- summary box -->
+        <!-- headline -->
+        <div class='box--pop-out box--pop-out__top'>
+          <h2 class='text--headline-2 alpha'>
+            Order Summary
+          </h2>
+        </div>
+        <div class='box--pop-out box--pop-out__bottom'>
+          <!-- item -->
+          <!-- / THIS ITEM FOR STATIC DEMO, CAN BE REMOVED -->
+          <div class='cart__row cart__row--tight'>
+            <div class='cart__cell columns-8 alpha'>
+              US City Priority Job Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              2
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              $99.98
+            </div>
+          </div>
+          <!-- item -->
+          <!-- / ADD DIVIDER CLASS box--divider-bottom TO LAST cart__row IN LIST -->
+          <div class='cart__row cart__row--tight box--divider-bottom'>
+            <div class='cart__cell columns-8 alpha'>
+              <!-- / ITEM TITLE -->
+              Money Jobs Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              <!-- / ITEM COUNT # -->
+              1
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              <!-- / ITEM COUNT * PRICE -->
+              $9,999.99
+            </div>
+          </div>
+          <!-- subtotals -->
+          <div class='cart__row cart__row--tight checkout-summary__subtotal-box'>
+            <div class='cart__cell columns-6 alpha'>
+              Subtotal:
+              <br>Estimated Tax:</br>
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / SUBTOTAL # -->
+              $99,999.98
+              <!-- / TAX # -->
+              <br>$99.99</br>
+            </div>
+          </div>
+          <!-- total -->
+          <div class='cart__row cart__row--tight text--larger'>
+            <div class='cart__cell columns-6 alpha'>
+              Order Total:
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / ORDER TOTAL # -->
+              $999,999.99
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class='container text--body'>
+      <section class='columns-8 large-screen-only checkout-summary'>
+        <div class='confirmation__message'>
+          <!-- A confirmation message displayed after ordering -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec sagittis massa, at varius ligula. In ultrices a lectus eleifend dignissim. Aenean ac euismod risus. Vestibulum feugiat leo eget lacus fringilla, non cursus risus molestie. Proin accumsan lorem nec tincidunt suscipit. Duis in nisl vel lectus convallis accumsan. Morbi in dignissim felis, quis mattis ipsum. Mauris pulvinar sem felis, nec porta nulla pellentesque quis. Curabitur sit amet convallis libero. Proin at finibus sapien. Integer in purus laoreet, iaculis erat quis, ornare neque. Nunc at scelerisque ipsum, volutpat venenatis erat.
+        </div>
+        <a class='button button--primary confirmation__button' href='#post-job'>
+          Post Your Job Now
+        </a>
+        <!-- summary box -->
+        <!-- headline -->
+        <div class='box--pop-out box--pop-out__top'>
+          <h2 class='text--headline-2 alpha'>
+            Order Summary
+          </h2>
+        </div>
+        <div class='box--pop-out box--pop-out__bottom'>
+          <!-- item -->
+          <!-- / THIS ITEM FOR STATIC DEMO, CAN BE REMOVED -->
+          <div class='cart__row cart__row--tight'>
+            <div class='cart__cell columns-8 alpha'>
+              US City Priority Job Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              2
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              $99.98
+            </div>
+          </div>
+          <!-- item -->
+          <!-- / ADD DIVIDER CLASS box--divider-bottom TO LAST cart__row IN LIST -->
+          <div class='cart__row cart__row--tight box--divider-bottom'>
+            <div class='cart__cell columns-8 alpha'>
+              <!-- / ITEM TITLE -->
+              Money Jobs Posting
+            </div>
+            <div class='cart__cell columns-1'>
+              <!-- / ITEM COUNT # -->
+              1
+            </div>
+            <div class='cart__cell columns-3 omega'>
+              <!-- / ITEM COUNT * PRICE -->
+              $9,999.99
+            </div>
+          </div>
+          <!-- subtotals -->
+          <div class='cart__row cart__row--tight checkout-summary__subtotal-box'>
+            <div class='cart__cell columns-6 alpha'>
+              Subtotal:
+              <br>Estimated Tax:</br>
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / SUBTOTAL # -->
+              $99,999.98
+              <!-- / TAX # -->
+              <br>$99.99</br>
+            </div>
+          </div>
+          <!-- total -->
+          <div class='cart__row cart__row--tight text--larger'>
+            <div class='cart__cell columns-6 alpha'>
+              Order Total:
+            </div>
+            <div class='cart__cell columns-6 omega'>
+              <!-- / ORDER TOTAL # -->
+              $999,999.99
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class='large-screen-only columns-4'>
+        <div class='cart recommended-items--vertical'>
+          <div class='cart__row box--header-row container'>
+            <div class='recommended-items--vertical__header cart__cell'>
+              Recommended for you
+            </div>
+          </div>
+          <div class='cart__row container'>
+            <div class='cart__cell recommended-items__block--vertical box--divider-bottom'>
+              <a href='#item-link'>
+                <!-- ITEM TITLE -->
+                Dynamic Emails
+              </a>
+              <p class='text--caption cart__caption'>
+                <!-- ITEM DESCRIPTION -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                <!-- ITEM PRICE -->
+                $39.90
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Buy
+              </a>
+            </div>
+            <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
+            <div class='cart__cell recommended-items__block--vertical box--divider-bottom'>
+              <a href='#item-link'>
+                Company Profile
+              </a>
+              <p class='text--caption cart__caption'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum  arcu sed ultrices facilisis  arcu sed ultrices facilisis arcu sed ultrices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                $10.00
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Buy
+              </a>
+            </div>
+            <!-- REPEATED FOR STATIC DEMO, CAN BE REMOVED -->
+            <!-- / NO box--divider-bottom ON LAST ITEM -->
+            <div class='cart__cell recommended-items__block--vertical'>
+              <a href='#item-link'>
+                Dynamic Emails
+              </a>
+              <p class='text--caption cart__caption'>
+                Lorem ipsum dolor sit amet, corices facilisis.
+              </p>
+              <p class='cart--item-price'>
+                $99.99
+              </p>
+              <a class='button button--secondary' href='#apply-action'>
+                Buy
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- global footer -->
+    <footer class='footer container text--body large-screen-only'>
+      <div class='footer__subnav text--subnav'>
+        <ul>
+          <li>
+            <a href='#subnav'>
+              Help
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Security & Privacy
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Advertise With Us
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Partners & Affiliates
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='footer__logo-row'>
+        <div class='footer__logo'>
+          LOGO
+        </div>
+        <div class='footer__share-links footer__subnav text--subnav'>
+          <ul>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                Sharelink
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascripts/site-71d05b95.js" type="text/javascript"></script>
+  </body>
+</html>
