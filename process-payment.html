@@ -11,10 +11,12 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Checkout | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/stylesheets/site-6fe0638b.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-4f712e2d.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='process-payment base-background'>
-    <header class='top-bar'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
@@ -24,18 +26,176 @@
       <div class='top-bar__helper-text text--white text--top-bar-helper medium-screen-up'>
         <div class='email-us-link'>
           Need help? Call
-          <a href='#unknown-link'>800-891-8880</a>
+          <a href='tel:+1-800-891-8880'>800-891-8880</a>
           or
-          <a href='#email-us-link' id='email-us-link'>Email Us</a>
+          <a class='modal-open--email-us' href='javascript:void(0)'>Email Us</a>
         </div>
       </div>
+      <!-- / mobile menu open link -->
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <i class='fa fa-bars fa-2x'></i>
+      </nav>
     </header>
+    <!-- / mobile menu -->
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- modals -->
+    <div class='modal__positioning'>
+      <div class='modal__container text--body'>
+        <div class='modal__box box--pop-out hidden' id='modal--email-us'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            Contact Us
+          </h2>
+          <form class='modal__form'>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Name
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Email
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Phone
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Subject
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Your Message
+                <span class='text--accent'>*</span>
+              </div>
+              <textarea class='modal__form-right' rows='6'></textarea>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'></div>
+              <div class='modal__form-right'>
+                <span class='text--accent'>*</span>
+                Required Fields
+              </div>
+            </label>
+            <div class='modal__form-row omega'></div>
+            <div class='modal__form-row'>
+              <submit class='button button--primary modal__form-submit close-modal'>
+                Send Message and Close
+              </submit>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- thin-header -->
-    
-    <!-- header -->
-    <header class='header header--thin '>
+    <!-- / initializes optional parameters -->
+    <!-- header-medium -->
+    <header class='header header--medium '>
       <div class='container'>
-        <div class='header__subnav medium-screen-up'></div>
+        <!-- header__subnav -->
+        <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
+          <ul>
+            <li>
+              <a href='#products'>
+                Products
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#cart'>
+                Resources
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#contact'>
+                About Us
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- header__headline -->
         <h1 class='header__headline text--headline text--white'>
           Checkout
         </h1>
@@ -136,7 +296,41 @@
       <section class='half-page-large'>
         <form class='form--large'>
           <!-- / Use div to indicate new row. Class "clear-fix" if required. -->
-          <div>
+          <div class='box--alert'>
+            <a href='#close-alert'>
+              <i class='fa fa-times fa-lg'></i>
+            </a>
+            This is an example alert box. This is an example alert box. This is an example alert box example alert box alert box alert box alert box alert box.
+          </div>
+          <div class='box--alert box--alert--info'>
+            <a href='#close-alert'>
+              <i class='fa fa-times fa-lg'></i>
+            </a>
+            <i class='fa fa-info-circle fa-lg'></i>
+            This is an example alert box, info variant.
+          </div>
+          <div class='box--alert box--alert--success'>
+            <a href='#close-alert'>
+              <i class='fa fa-times fa-lg'></i>
+            </a>
+            <i class='fa fa-check-circle fa-lg'></i>
+            This is an example alert box, success variant.
+          </div>
+          <div class='box--alert box--alert--caution'>
+            <a href='#close-alert'>
+              <i class='fa fa-times fa-lg'></i>
+            </a>
+            <i class='fa fa-exclamation-circle fa-lg'></i>
+            This is an example alert box, caution variant.
+          </div>
+          <div class='box--alert box--alert--danger'>
+            <a href='#close-alert'>
+              <i class='fa fa-times fa-lg'></i>
+            </a>
+            <i class='fa fa-exclamation-circle fa-lg'></i>
+            This is an example alert box, danger variant.
+          </div>
+          <div class='clear-fix'>
             <h2 class='text--accent text--headline-2 alpha'>
               <span class='box--circle-text'>
                 <span>1</span>
@@ -144,7 +338,7 @@
               User Information
             </h2>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-5'>
               First Name
               <br>
@@ -156,14 +350,34 @@
               <input type='text'>
             </label>
           </div>
-          <div>
+          <!-- / CONTEXTUAL TO USER, SEE SPECS -->
+          <div class='clear-fix'>
+            <label>
+              Choose a Password
+              <br>
+              <input id='password-field' type='text'>
+              <!-- / Password helper appears on any field to CREATE NEW PASSWORD (not login) -->
+              <div class='large-screen-only'>
+                <div class='form__error box--arrow-helper hidden' id='password-helper'>
+                  Password Must Contain
+                  <ul>
+                    <li>8 to 15 charecters</li>
+                    <li>1 uppercase letter</li>
+                    <li>1 lowercase letter</li>
+                    <li>1 letter or symbol</li>
+                  </ul>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class='clear-fix'>
             <label>
               Email Address
               <br>
               <input type='text'>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12 omega'>
               Your role in hiring process
               <span class='text--ghost'>
@@ -180,7 +394,7 @@
               </select>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <h2 class='text--accent text--headline-2'>
               <span class='box--circle-text'>
                 <span>2</span>
@@ -188,32 +402,44 @@
               Company Information
             </h2>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label>
               Company Name
               <br>
-              <input type='text'>
+              <input class='form__field--success' type='text'>
+              <div class='form__subtext text--success'>
+                This is an example of subtext success message.
+              </div>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label>
               Company Address
               <br>
-              <input type='text'>
+              <input class='form__field--danger' type='text'>
+              <div class='form__subtext text--danger'>
+                This is an example of subtext warning type. This is an example of subtext warning type.
+              </div>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label>
               Country
               <br>
               <input type='text'>
+              <div class='form__error box--arrow box--arrow--caution clear-fix'>
+                This is an example 'caution' style error message.
+              </div>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-6'>
               City
               <br>
               <input type='text'>
+              <div class='form__error box--arrow clear-fix'>
+                This is an example 'alert' style error message.
+              </div>
             </label>
             <label class='columns-3'>
               State
@@ -227,7 +453,7 @@
             </label>
           </div>
           <div class='box--divider-bottom columns-12' style='margin-bottom: 32px;'></div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12 alpha'>
               Industry
               <br>
@@ -239,7 +465,7 @@
               </select>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-5'>
               Number of Employees
               <br>
@@ -261,7 +487,7 @@
               </select>
             </label>
           </div>
-          <div class='columns-12 omega'>
+          <div class='columns-12 omega clear-fix'>
             <label class='columns-5'>
               # of Locations
               <span class='text--ghost'>Optional</span>
@@ -274,7 +500,7 @@
               <input type='text'>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <h2 class='text--accent text--headline-2 alpha'>
               <span class='box--circle-text'>
                 <span>3</span>
@@ -282,7 +508,7 @@
               Payment Information
             </h2>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-4'>
               Payment Type
               <select>
@@ -296,18 +522,18 @@
               <img src='assets/images/icon--credit-cards-30e11717.png' style='position: relative; top: 25px;'>
             </div>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12'>
               Cardholder's Name
               <br>
               <input type='text'>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-7'>
               Card Number
               <br>
-              <input type='text'>
+              <input id='card-number-field' type='text'>
             </label>
             <label class='columns-4 shift-1'>
               Expiration Date
@@ -325,40 +551,42 @@
               </select>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-3'>
               Security Code
               <br>
               <input type='password'>
             </label>
-            <div class='columns-6'>
-              <a class='text--smaller' href='#security-code' style='position: relative; top: 30px;'>
-                What is this?
-              </a>
+            <div class='columns-9'>
+              <div class='form__security-code-helper simplified-cart__card-container' id='security-code-helper'>
+                <img id="visa" src="assets/images/icon--card-visa-helper-9e1ce60b.png" />
+                <img id="amex" src="assets/images/icon--card-amex-helper-d9b33908.png" />
+                <div></div>
+              </div>
             </div>
           </div>
           <div class='form--large__divider-line box--divider-bottom'></div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12 form--large__trailing-label alpha'>
               <input type='checkbox'>
               <span class='text--thin'>Use Company Address (From Above)</span>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12'>
               Billing Address 1
               <br>
               <input type='text'>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12'>
               Billing Address 2
               <br>
               <input type='text'>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12'>
               Country
               <br>
@@ -370,7 +598,7 @@
               </select>
             </label>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-6'>
               City
               <br>
@@ -387,12 +615,12 @@
               <input type='text'>
             </label>
           </div>
-          <div class='columns-12'>
+          <div class='columns-12 clear-fix'>
             <h3 class='text--headline-3'>
               Accept Terms and Conditions
             </h3>
           </div>
-          <div>
+          <div class='clear-fix'>
             <label class='columns-12 form--large__trailing-label alpha omega'>
               <input type='checkbox'>
               <span class='text--thin'>
@@ -401,7 +629,7 @@
               </span>
             </label>
           </div>
-          <div class='columns-12'>
+          <div class='columns-12 clear-fix'>
             <submit class='button button--primary'>
               Complete Purchase
             </submit>
@@ -506,29 +734,34 @@
       </div>
       <div class='footer__logo-row'>
         <div class='footer__logo'>
-          LOGO
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
         </div>
         <div class='footer__share-links footer__subnav text--subnav'>
           <ul>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-twitter-21674135.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-71d05b95.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
   </body>
 </html>

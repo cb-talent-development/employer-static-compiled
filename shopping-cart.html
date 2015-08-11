@@ -9,43 +9,58 @@
     <!-- placeholder -->
     <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Shopping Cart | CareerBuilder</title>
+    <title>Your Cart | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/stylesheets/site-6fe0638b.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-4f712e2d.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='shopping-cart base-background'>
-    <header class='top-bar'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
           <img src='assets/images/placeholder-logo-e2d254a1.png'>
         </a>
       </div>
-      <nav class='top-bar__links text--white text--top-bar-link medium-screen-up'>
+      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
         <ul>
-          <a href='#account'>
-            <li>
+          <li>
+            <a href='#account'>
               <img src='assets/images/icon--account-8b7208ff.png'>
               My Account
-            </li>
-          </a>
-          <a href='#cart'>
-            <li>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
               <img src='assets/images/icon--cart-69058b39.png'>
               $1337.00 Cart
-            </li>
-          </a>
-          <a href='#contact'>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
               Contact Us
-            </li>
-          </a>
+            </a>
+          </li>
         </ul>
       </nav>
+      <!-- / mobile menu open link -->
       <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
-        <img src='assets/images/icon--mobile-menu-8d85d6da.png'>
+        <i class='fa fa-bars fa-2x'></i>
       </nav>
     </header>
+    <!-- / mobile menu -->
     <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
       <ul>
         <li>
@@ -82,28 +97,125 @@
         </li>
       </ul>
     </nav>
+    <!-- modals -->
+    <div class='modal__positioning'>
+      <div class='modal__container text--body'>
+        <div class='modal__box box--pop-out hidden' id='modal--email-us'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            Contact Us
+          </h2>
+          <form class='modal__form'>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Name
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Email
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Phone
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Subject
+                <span class='text--accent'>*</span>
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Your Message
+                <span class='text--accent'>*</span>
+              </div>
+              <textarea class='modal__form-right' rows='6'></textarea>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'></div>
+              <div class='modal__form-right'>
+                <span class='text--accent'>*</span>
+                Required Fields
+              </div>
+            </label>
+            <div class='modal__form-row omega'></div>
+            <div class='modal__form-row'>
+              <submit class='button button--primary modal__form-submit close-modal'>
+                Send Message and Close
+              </submit>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- thin-header -->
-    
+    <!-- / initializes optional parameters -->
     <!-- header-medium -->
     <header class='header header--medium '>
       <div class='container'>
         <!-- header__subnav -->
-        <nav class='header__subnav text--white text--subnav medium-screen-up'>
+        <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
           <ul>
             <li>
               <a href='#products'>
                 Products
               </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href='#cart'>
                 Resources
               </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href='#contact'>
                 About Us
               </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -145,109 +257,217 @@
       <div class='helper-text'>
         <div class='email-us-link'>
           Need help? Call
-          <a href='#unknown-link'>800-891-8880</a>
+          <a href='tel:+1-800-891-8880'>800-891-8880</a>
           or
-          <a href='#email-us-link' id='email-us-link'>Email Us</a>
+          <a class='modal-open--email-us' href='javascript:void(0)'>Email Us</a>
         </div>
-      </div>
-      <!-- cart -->
-      <section class='cart items-in-cart'>
-        <!-- cart__header-row -->
-        <div class='cart__row box--header-row'>
-          <div class='cart__cell cart__cell--title'>
-            Items in your cart
+        <!-- cart -->
+        <!-- / initializes optional parameters -->
+        <!-- cart -->
+        <section class='cart items-in-cart'>
+          <!-- cart__header-row -->
+          <div class='cart__row box--header-row'>
+            <div class='cart__cell cart__cell--title'>
+              Items in your cart
+            </div>
+            <div class='cart__cell cart__cell--quantity'>
+              Quantity
+            </div>
+            <div class='cart__cell cart__cell--remove'></div>
+            <div class='cart__cell cart__cell--price large-screen-only'>
+              Price
+            </div>
+            <div class='cart__cell cart__cell--total'>
+              Total
+            </div>
           </div>
-          <div class='cart__cell cart__cell--quantity'>
-            Quantity
+          <!-- cart__row -->
+          <div class='cart__row box--divider-bottom'>
+            <div class='cart__cell cart__cell--title'>
+              <a href='#item-title-link'>
+                <!-- ITEM TITLE -->
+                US Priority Job Posting
+              </a>
+              <p class='text--caption cart__caption medium-screen-up'>
+                <!-- ITEM DESCRIPTION -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+            </div>
+            <div class='cart__cell cart__cell--quantity'>
+              <!-- ITEM QUANTITY IN VALUE FIELD -->
+              <select>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31</option>
+                <option value='32'>32</option>
+                <option value='33'>33</option>
+                <option value='34'>34</option>
+                <option value='35'>35</option>
+                <option value='36'>36</option>
+                <option value='37'>37</option>
+                <option value='38'>38</option>
+                <option value='39'>39</option>
+                <option value='40'>40</option>
+                <option value='41'>41</option>
+                <option value='42'>42</option>
+                <option value='43'>43</option>
+                <option value='44'>44</option>
+                <option value='45'>45</option>
+                <option value='46'>46</option>
+                <option value='47'>47</option>
+                <option value='48'>48</option>
+                <option value='49'>49</option>
+                <option value='50'>50</option>
+              </select>
+            </div>
+            <div class='cart__cell cart__cell--remove text--smaller'>
+              <a class='medium-screen-up' href='#remove-from-cart'>
+                Remove
+              </a>
+            </div>
+            <div class='cart__cell cart__cell--price large-screen-only'>
+              <!-- SINGLE UNIT PRICE -->
+              $250.00
+            </div>
+            <div class='cart__cell cart__cell--total'>
+              <!-- UNIT PRICE * QUANTITY -->
+              $500.00
+            </div>
           </div>
-          <div class='cart__cell cart__cell--remove'></div>
-          <div class='cart__cell cart__cell--price large-screen-only'>
-            Price
+          <!-- cart__row -->
+          <!-- SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED -->
+          <div class='cart__row box--divider-bottom'>
+            <div class='cart__cell cart__cell--title'>
+              <a class='cart__item-title' href='#item-title-link'>
+                Second Job Posting
+              </a>
+              <p class='text--caption medium-screen-up'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
+              </p>
+            </div>
+            <div class='cart__cell cart__cell--quantity'>
+              <select>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31</option>
+                <option value='32'>32</option>
+                <option value='33'>33</option>
+                <option value='34'>34</option>
+                <option value='35'>35</option>
+                <option value='36'>36</option>
+                <option value='37'>37</option>
+                <option value='38'>38</option>
+                <option value='39'>39</option>
+                <option value='40'>40</option>
+                <option value='41'>41</option>
+                <option value='42'>42</option>
+                <option value='43'>43</option>
+                <option value='44'>44</option>
+                <option value='45'>45</option>
+                <option value='46'>46</option>
+                <option value='47'>47</option>
+                <option value='48'>48</option>
+                <option value='49'>49</option>
+                <option value='50'>50</option>
+              </select>
+            </div>
+            <div class='cart__cell cart__cell--remove text--smaller'>
+              <a class='medium-screen-up' href='#remove-from-cart'>
+                Remove
+              </a>
+            </div>
+            <div class='cart__cell cart__cell--price large-screen-only'>
+              <!-- SINGLE PRICE HERE -->
+              $300.00
+            </div>
+            <div class='cart__cell cart__cell--total'>
+              <!-- PRICE * QUANTITY HERE -->
+              $300.00
+            </div>
           </div>
-          <div class='cart__cell cart__cell--total'>
-            Total
-          </div>
-        </div>
-        <!-- cart__row -->
-        <div class='cart__row box--divider-bottom'>
-          <div class='cart__cell cart__cell--title'>
-            <a href='#item-title-link'>
-              <!-- ITEM TITLE -->
-              US Priority Job Posting
-            </a>
-            <p class='text--caption cart__caption medium-screen-up'>
-              <!-- ITEM DESCRIPTION -->
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-            </p>
-          </div>
-          <div class='cart__cell cart__cell--quantity'>
-            <!-- Input type Number falls back to text field in IE8, IE9 -->
-            <!-- http://html5please.com/#number -->
-            <!-- ITEM QUANTITY IN VALUE FIELD -->
-            <input type='number' value='2'>
-          </div>
-          <div class='cart__cell cart__cell--remove text--smaller'>
-            <a class='medium-screen-up' href='#remove-from-cart'>
-              Remove
-            </a>
-          </div>
-          <div class='cart__cell cart__cell--price large-screen-only'>
-            <!-- SINGLE UNIT PRICE -->
-            $250.00
-          </div>
-          <div class='cart__cell cart__cell--total'>
-            <!-- UNIT PRICE * QUANTITY -->
-            $500.00
-          </div>
-        </div>
-        <!-- cart__row -->
-        <!-- SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED -->
-        <div class='cart__row box--divider-bottom'>
-          <div class='cart__cell cart__cell--title'>
-            <a class='cart__item-title' href='#item-title-link'>
-              Second Job Posting
-            </a>
-            <p class='text--caption medium-screen-up'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum arcu sed ultrices facilisis.
-            </p>
-          </div>
-          <div class='cart__cell cart__cell--quantity'>
-            <input type='number' value='1'>
-          </div>
-          <div class='cart__cell cart__cell--remove text--smaller'>
-            <a class='medium-screen-up' href='#remove-from-cart'>
-              Remove
-            </a>
-          </div>
-          <div class='cart__cell cart__cell--price large-screen-only'>
-            <!-- SINGLE PRICE HERE -->
-            $300.00
-          </div>
-          <div class='cart__cell cart__cell--total'>
-            <!-- PRICE * QUANTITY HERE -->
-            $300.00
-          </div>
-        </div>
+        </section>
         <!-- Promo code link -->
         <div class='cart__row medium-screen-up'>
           <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
             Have a promo code? Click here to apply it to your order.
+            <div class='arrow--down promo-code-arrow'></div>
           </a>
         </div>
         <div class='cart__row small-screen-only'>
           <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
             Apply promo code.
+            <div class='arrow--down promo-code-arrow'></div>
           </a>
         </div>
         <!-- Promo code modal -->
-        <div class='box--pop-out box--quick-submit box--yellow apply-discount hidden' id='apply-discount'>
+        <div class='box--quick-submit box--quick-submit apply-discount hidden' id='apply-discount'>
           <!-- SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC -->
           <input class='box--quick-submit__input' type='text'>
-          <button class='button button--primary box--quick-submit__button'>
-            Apply Promo
-          </button>
+          <div class='box--quick-submit__button-container'>
+            <button class='button button--secondary box--quick-submit__button cart__apply-discount-link'>
+              Apply
+            </button>
+          </div>
         </div>
-      </section>
+      </div>
       <!-- Recommended for you -->
       <section class='large-screen-only columns-8'>
         <div class='cart recommended-items'>
@@ -328,9 +548,14 @@
           <div class='cart__row checkout__subtotal text--smaller'>
             <div class='cart__cell checkout__item--left'>
               Promo code:
-              <br>TROGDOR -- (10% off)</br>
+              <br>
+                TROGDOR
+                &nbsp;
+                <a class='text--delete-button' href='#remove-promo-code'>remove</a>
+              </br>
             </div>
             <div class='cart__cell checkout__item--right text--success'>
+              <br>
               -$9.99
             </div>
           </div>
@@ -394,29 +619,34 @@
       </div>
       <div class='footer__logo-row'>
         <div class='footer__logo'>
-          LOGO
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
         </div>
         <div class='footer__share-links footer__subnav text--subnav'>
           <ul>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-twitter-21674135.png" />
               </a>
             </li>
             <li>
               <a href='#share-logo'>
-                Sharelink
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-71d05b95.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
   </body>
 </html>

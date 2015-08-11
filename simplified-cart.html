@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <!-- Responsive/Mobile Content Controls -->
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
+    <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
+    <!-- placeholder -->
+    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Your Cart | CareerBuilder</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-4f712e2d.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='simplified-cart base-background'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar' id='top-bar'>
+      <div class='top-bar__logo'>
+        <a href='/'>
+          <!-- / low-fi image of logo for positioning, needs to be updated -->
+          <img src='assets/images/placeholder-logo-e2d254a1.png'>
+        </a>
+      </div>
+      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
+        <ul>
+          <li>
+            <a href='#account'>
+              <img src='assets/images/icon--account-8b7208ff.png'>
+              My Account
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
+              <img src='assets/images/icon--cart-69058b39.png'>
+              $1337.00 Cart
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- / mobile menu open link -->
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <i class='fa fa-bars fa-2x'></i>
+      </nav>
+    </header>
+    <!-- / mobile menu -->
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- modals -->
+    <div class='modal__positioning'>
+      <div class='modal__container text--body'>
+        <!-- / #modal--change-billing-address -->
+        <div class='modal__box box--pop-out hidden' id='modal--change-billing-address'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            Change Payment Method
+          </h2>
+          <form class='modal__form'>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Cardholder's Name
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Select Payment Type
+              </div>
+              <select class='modal__form-right'>
+                <option selected style='display: none;' value=''></option>
+                <option>placeholder</option>
+                <option>placeholder 2</option>
+                <option>placeholder 3</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Card Number
+              </div>
+              <input class='modal__form-right' id='card-number-field' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Expiration Date
+              </div>
+              <select class='columns-2'>
+                <option selected style='display: none;' value=''>
+                  Month
+                </option>
+                <option value='01'>01</option>
+              </select>
+              <select class='columns-2'>
+                <option selected style='display: none;' value=''>
+                  Year
+                </option>
+                <option value='2015'>2015</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Security Code
+              </div>
+              <div class='modal__form-right'>
+                <input class='columns-4' type='password'>
+                <div class='columns-8'>
+                  <div class='form__security-code-helper simplified-cart__card-container' id='security-code-helper'>
+                    <img id="visa" src="assets/images/icon--card-visa-helper-9e1ce60b.png" />
+                    <img id="amex" src="assets/images/icon--card-amex-helper-d9b33908.png" />
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Billing Address
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                State
+              </div>
+              <select class='modal__form-right'>
+                <option selected style='display: none;' value=''></option>
+                <option>placeholder</option>
+                <option>placeholder 2</option>
+                <option>placeholder 3</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                City
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Zip
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Country
+              </div>
+              <select class='modal__form-right'>
+                <option selected style='display: none;' value=''></option>
+                <option>placeholder</option>
+                <option>placeholder 2</option>
+                <option>placeholder 3</option>
+              </select>
+            </label>
+            <div class='modal__form-row omega'></div>
+            <div class='modal__form-row'>
+              <submit class='button button--primary modal__form-submit close-modal'>
+                Save and Close
+              </submit>
+            </div>
+          </form>
+        </div>
+        <!-- / #modal--change-company-address -->
+        <div class='modal__box box--pop-out hidden' id='modal--change-company-address'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            Change Company Address
+          </h2>
+          <form class='modal__form'>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Company Address
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Country
+              </div>
+              <select class='modal__form-right'>
+                <option selected style='display: none;' value=''></option>
+                <option>placeholder</option>
+                <option>placeholder 2</option>
+                <option>placeholder 3</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                State
+              </div>
+              <select class='modal__form-right'>
+                <option selected style='display: none;' value=''></option>
+                <option>placeholder</option>
+                <option>placeholder 2</option>
+                <option>placeholder 3</option>
+              </select>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                City
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <label class='modal__form-row'>
+              <div class='modal__form-left'>
+                Zip
+              </div>
+              <input class='modal__form-right' type='text'>
+            </label>
+            <div class='modal__form-row omega'></div>
+            <div class='modal__form-row'>
+              <submit class='button button--primary modal__form-submit close-modal'>
+                Save and Close
+              </submit>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- thin-header -->
+    <!-- / initializes optional parameters -->
+    <!-- header -->
+    <header class='header header--thin '>
+      <div class='container'>
+        <div class='header__subnav medium-screen-up'></div>
+        <h1 class='header__headline text--headline text--white'>
+          Your Cart
+        </h1>
+      </div>
+    </header>
+    <div class='container text--body'>
+      <!-- left columns - items in cart, promo, billing info -->
+      <section class='cart cart--simplified cart--simplified__main-column'>
+        <!-- cart__header-row -->
+        <div class='cart__row box--divider-bottom'>
+          <div class='cart__cell cart__cell--title cart--simplified__cell--headline'>
+            <span class='text--headline-2'>
+              Shopping Cart
+            </span>
+            <a class='text--edit-link' href='#edit-link'>Edit</a>
+          </div>
+        </div>
+        <!-- cart__row -->
+        <div class='cart__row box--divider-bottom'>
+          <div class='cart__cell cart--simplified__cell--title'>
+            <!-- ITEM TITLE -->
+            TITLE US Priority Job Posting TITLE
+            <!-- ITEM QUANTITY -->
+            (&nbsp;NUMBER&nbsp;)
+          </div>
+          <div class='cart__cell cart--simplified__cell--total' style='text-align: right'>
+            <!-- UNIT PRICE * QUANTITY -->
+            $500.00
+          </div>
+        </div>
+        <!-- cart__row -->
+        <!-- SECOND ROW FOR STATIC SITE DEMO, CAN BE REMOVED -->
+        <div class='cart__row box--divider-bottom'>
+          <div class='cart__cell cart--simplified__cell--title'>
+            <!-- ITEM TITLE -->
+            ut natus fugiat repudiandae sed in nisi sit doloremque eos qui iure iste sit pariatur
+            <!-- ITEM QUANTITY -->
+            (&nbsp;2&nbsp;)
+          </div>
+          <div class='cart__cell cart--simplified__cell--total' style='text-align: right'>
+            <!-- UNIT PRICE * QUANTITY -->
+            $99999.00
+          </div>
+        </div>
+        <!-- promo box -->
+        <div class='cart__row medium-screen-up'>
+          <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
+            Have a promo code? Click here to apply it to your order.
+            <div class='arrow--down promo-code-arrow'></div>
+          </a>
+        </div>
+        <!-- promo box - alternate text -->
+        <div class='cart__row small-screen-only'>
+          <a class='cart__cell text--caption cart__apply-discount-link' href='#apply-promo-code'>
+            Apply promo code.
+            <div class='arrow--down promo-code-arrow'></div>
+          </a>
+        </div>
+        <!-- Promo code modal -->
+        <div class='box--quick-submit box--quick-submit--narrow apply-discount hidden' id='apply-discount'>
+          <!-- SUBMIT SHOULD VALIDATE DISCOUNT, SHOW CONFIRMATION, ETC -->
+          <input class='box--quick-submit__input' type='text'>
+          <div class='box--quick-submit__button-container'>
+            <button class='button button--secondary box--quick-submit__button cart__apply-discount-link'>
+              Apply
+            </button>
+          </div>
+        </div>
+        <!-- billing info section - header-row -->
+        <div class='cart__row' style='margin-top: 32px'>
+          <div class='cart__cell cart__cell--title'>
+            <span class='text--headline-2' style='padding-right: 20px;'>
+              Billing Info
+            </span>
+          </div>
+        </div>
+        <!-- billing info - data row -->
+        <div class='cart__row'>
+          <address class='cart__cell columns-6 text--address-block'>
+            <div class='text--address-block__header-row'>
+              <span class='text--strong'>Company Address</span>
+              <span>
+                <a class='text--edit-link modal-open--change-company-address' href='javascript:void(0)'>Change</a>
+              </span>
+            </div>
+            <div>
+              Address line
+            </div>
+            <div>
+              Address line
+            </div>
+            <div>
+              Address line
+            </div>
+            <div>
+              PHONE NUMBER line
+            </div>
+          </address>
+          <div class='columns-6'>
+            <address class='cart__cell text--address-block'>
+              <div class='text--address-block__header-row'>
+                <span class='text--strong'>Billing Address</span>
+                <span>
+                  <a class='text--edit-link modal-open--change-billing-address' href='javascript:void(0)'>Change</a>
+                </span>
+              </div>
+              <div>
+                Address line
+              </div>
+              <div>
+                Address line
+              </div>
+              <div>
+                Address line
+              </div>
+              <div>
+                PHONE NUMBER line
+              </div>
+            </address>
+            <div class='simplified-cart__card-container'>
+              <!-- / provide classes 'visa' 'discover' 'amex' 'mastercard' -->
+              <div class='simplified-cart__card visa'></div>
+              <!-- / provide last-four-digits of card, replaces 1234 -->
+              <div class='simplified-cart__card-caption'>Ending in 1234</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- right columns - checkout summary -->
+      <section class='checkout--simplified cart--simplified__secondary-column'>
+        <div class='box--pop-out'>
+          <!-- subtotal -->
+          <div class='cart__row checkout--simplified__subtotal text--smaller'>
+            <div class='cart__cell checkout__item--left'>
+              Subtotal:
+            </div>
+            <div class='cart__cell checkout__item--right'>
+              $99.99
+            </div>
+          </div>
+          <!-- promo code (if applied) -->
+          <div class='cart__row checkout--simplified__subtotal text--smaller'>
+            <div class='cart__cell checkout__item--left'>
+              Promo code:
+              <br>
+                TROGDOR
+                &nbsp;
+                <a class='text--delete-button' href='#remove-promo-code'>remove</a>
+              </br>
+            </div>
+            <div class='cart__cell checkout__item--right text--success'>
+              <br>
+              -$9.99
+            </div>
+          </div>
+          <!-- tax -->
+          <div class='cart__row checkout--simplified__subtotal text--smaller'>
+            <div class='cart__cell checkout__item--left'>
+              Tax:
+            </div>
+            <div class='cart__cell checkout__item--right'>
+              $8.99
+            </div>
+          </div>
+          <!-- total -->
+          <div class='cart__row checkout--simplified__total'>
+            <div class='cart__cell checkout__item--left'>
+              Order Total:
+            </div>
+            <div class='cart__cell checkout__item--right'>
+              $109.98
+            </div>
+          </div>
+          <form>
+            <label class='columns-2 form--large__trailing-label alpha' style='margin-bottom: 20px'>
+              <input type='checkbox'>
+              <span class='checkout__terms-label-container text--thin text--smaller'></span>
+            </label>
+            <label class='columns-10 form--large__trailing-label omega checkout__terms-label' style='margin-bottom: 20px'>
+              I agree to CareerBuilder's
+              <a href='#terms'>Terms and Conditions</a>
+            </label>
+          </form>
+          <a class='button button--primary' href='#checkout' style='width: 100%'>
+            Complete Purchase
+          </a>
+        </div>
+        <div class='checkout__security-image'>
+          <img src='assets/images/placeholder--security-image-ff5f4645.png'>
+        </div>
+      </section>
+    </div>
+    <!-- global footer -->
+    <footer class='footer container text--body large-screen-only'>
+      <div class='footer__subnav text--subnav'>
+        <ul>
+          <li>
+            <a href='#subnav'>
+              Help
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Security & Privacy
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Advertise With Us
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Partners & Affiliates
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='footer__logo-row'>
+        <div class='footer__logo'>
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
+        </div>
+        <div class='footer__share-links footer__subnav text--subnav'>
+          <ul>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-twitter-21674135.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
+  </body>
+</html>
