@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <!-- Responsive/Mobile Content Controls -->
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
+    <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
+    <!-- placeholder -->
+    <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Post a Job | CareerBuilder</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-9506f66f.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
+    <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
+    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  </head>
+  <body class='post-a-job employer-scope'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar top-bar--white' id='top-bar'>
+      <div class='top-bar__logo'>
+        <a href='/'>
+          <!-- / low-fi image of logo for positioning, needs to be updated -->
+          <img src='assets/images/placeholder-logo-e2d254a1.png'>
+        </a>
+      </div>
+      <nav class='flyout top-bar__links text--top-bar-link medium-screen-up'>
+        <ul>
+          <li>
+            <a href='#account'>
+              <i class="fa fa-user fa-lg"></i>
+              My Account
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
+              <i class="fa fa-shopping-cart fa-lg"></i>
+              $1337.00 Cart
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- / mobile menu open link -->
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <i class='fa fa-bars fa-2x'></i>
+      </nav>
+    </header>
+    <!-- / mobile menu -->
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- thin-header -->
+    <!-- / initializes optional parameters -->
+    <!-- header-medium -->
+    <header class='header header--medium '>
+      <div class='container'>
+        <!-- header__subnav -->
+        <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
+          <ul>
+            <li>
+              <a href='#products'>
+                Products
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#cart'>
+                Resources
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#contact'>
+                About Us
+              </a>
+              <ul>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+                <li>
+                  <a href='#'>Menu item</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- header__headline -->
+        <h1 class='header__headline header--posting__headline text--headline text--white'>
+          Post a Job
+        </h1>
+        <div class='header__side-text text--white large-screen-only'>
+          <p>Already Purchased Postings?</p>
+          <a class='button button--secondary text--white'>
+            Edit Job Postings
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class='container text--body'>
+      <section class='posting__main-column'>
+        <div class='posting__under-text columns-12 pretty please medium-screen-down'>
+          <p>Already Purchased Postings?</p>
+          <a class='button button--secondary'>
+            Edit Job Postings
+          </a>
+        </div>
+        <div class='posting__top'>
+          <h2 class='text--accent'>Get the most exposure for your job</h2>
+          <p>
+            Get in front of the best and brightest job candidates with CareerBuilder’s Job Postings. Quickly and easily make the right hire on the No. 1 recruitment site.
+          </p>
+        </div>
+        <h3>Price Per Posting</h3>
+        <!-- content box -->
+        <div class='posting__middle'>
+          <div class='box--pop-out box--pop-out__top'>
+            <h2 class='text--headline-2 alpha'>
+              Content box headline
+            </h2>
+          </div>
+          <div class='box--pop-out box--pop-out__bottom'>
+            Voluptas ullam alias eius nobis et accusamus corrupti repellat quo voluptatem similique esse. Magni quo labore aliquam quia mollitia molestiae provident quibusdam voluptas esse ullam. Et qui consequatur quas aliquam ut non. Consequuntur natus distinctio excepturi magnam qui hic quod dolores eaque exercitationem aut optio id deserunt. Illo ut voluptatem voluptatem ea ut atque dignissimos nam ab vel libero provident dolorem. Labore sit assumenda ea repellat quae labore. Eos consequatur dolorem tempora. Fuga reiciendis inventore dolorum voluptas sint deserunt dignissimos quo. Officia eveniet porro alias et et in voluptatem voluptate. Sit impedit non voluptas modi nam sapiente quisquam excepturi in. Totam minus magnam ea aliquid consequatur maxime non maxime sequi. Debitis architecto non qui porro repellendus officiis eos
+          </div>
+        </div>
+        <form class='posting__form'>
+          <label class=''>
+            <select class='columns-2'>
+              <option value='0'>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+              <option value='9'>9</option>
+              <option value='10'>10</option>
+              <option value='11'>11</option>
+              <option value='12'>12</option>
+              <option value='13'>13</option>
+              <option value='14'>14</option>
+              <option value='15'>15</option>
+              <option value='16'>16</option>
+              <option value='17'>17</option>
+              <option value='18'>18</option>
+              <option value='19'>19</option>
+              <option value='20'>20</option>
+              <option value='21'>21</option>
+              <option value='22'>22</option>
+              <option value='23'>23</option>
+              <option value='24'>24</option>
+              <option value='25'>25</option>
+              <option value='26'>26</option>
+              <option value='27'>27</option>
+              <option value='28'>28</option>
+              <option value='29'>29</option>
+              <option value='30'>30</option>
+              <option value='31'>31</option>
+              <option value='32'>32</option>
+              <option value='33'>33</option>
+              <option value='34'>34</option>
+              <option value='35'>35</option>
+              <option value='36'>36</option>
+              <option value='37'>37</option>
+              <option value='38'>38</option>
+              <option value='39'>39</option>
+              <option value='40'>40</option>
+              <option value='41'>41</option>
+              <option value='42'>42</option>
+              <option value='43'>43</option>
+              <option value='44'>44</option>
+              <option value='45'>45</option>
+              <option value='46'>46</option>
+              <option value='47'>47</option>
+              <option value='48'>48</option>
+              <option value='49'>49</option>
+              <option value='50'>50</option>
+            </select>
+          </label>
+          <p class='columns-6'>
+            <strong>You save [###]</strong>
+            <br>The more you buy the more you save</br>
+          </p>
+          <div class='clear-fix'>
+            <submit class='button button--primary'>
+              Add to Cart
+            </submit>
+          </div>
+        </form>
+      </section>
+      <aside class='posting__lesser-column'>
+        <h3>Features</h3>
+        <ul>
+          <li>
+            Aut soluta autem eveniet deserunt est
+          </li>
+          <li>
+            Aspernatur exercitationem minima et soluta facere quia accusantium deleniti ut illo est pariatur
+          </li>
+          <li>
+            Quibusdam sint qui natus quae cum accusamus aut aperiam tempora sed aliquid rerum rerum sint
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- global footer -->
+    <footer class='footer container text--body large-screen-only'>
+      <div class='footer__subnav text--subnav'>
+        <ul>
+          <li>
+            <a href='#subnav'>
+              Help
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Security & Privacy
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Advertise With Us
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Partners & Affiliates
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='footer__logo-row'>
+        <div class='footer__logo'>
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
+        </div>
+        <div class='footer__share-links footer__subnav text--subnav'>
+          <ul>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-twitter-21674135.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascripts/site-2a795872.js" type="text/javascript"></script>
+  </body>
+</html>

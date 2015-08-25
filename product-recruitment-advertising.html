@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <!-- Responsive/Mobile Content Controls -->
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
+    <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
+    <!-- placeholder -->
+    <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Product Page | CareerBuilder</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-9506f66f.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
+    <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
+    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  </head>
+  <body class='product-recruitment-advertising employer-scope'>
+    <div class='modal__background hidden' id='modal-background'></div>
+    <header class='top-bar' id='top-bar'>
+      <div class='top-bar__logo'>
+        <a href='/'>
+          <!-- / low-fi image of logo for positioning, needs to be updated -->
+          <img src='assets/images/placeholder-logo-e2d254a1.png'>
+        </a>
+      </div>
+      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
+        <ul>
+          <li>
+            <a href='#account'>
+              <img src='assets/images/icon--account-8b7208ff.png'>
+              My Account
+            </a>
+            <ul>
+              <li>
+                <a href='#'>Menu item 1</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 2</a>
+              </li>
+              <li>
+                <a href='#'>Menu item 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href='#cart'>
+              <img src='assets/images/icon--cart-69058b39.png'>
+              $1337.00 Cart
+            </a>
+          </li>
+          <li>
+            <a href='#contact'>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- / mobile menu open link -->
+      <nav class='top-bar__links small-screen-only top-bar__mobile-menu-link' id='mobile-menu-link'>
+        <i class='fa fa-bars fa-2x'></i>
+      </nav>
+    </header>
+    <!-- / mobile menu -->
+    <nav class='top-bar__mobile-menu text--white text--subnav hidden' id='mobile-menu'>
+      <ul>
+        <li>
+          <a href='#menu'>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Resources
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--account-8b7208ff.png'>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            <img src='assets/images/icon--cart-69058b39.png'>
+            $1337.00 Cart
+          </a>
+        </li>
+        <li>
+          <a href='#menu'>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- / fixed, hidden until scroll -->
+    <div class='sticky-nav text--body large-screen-only'>
+      <nav class='container'>
+        <!-- / four links across top -->
+        <div class='product-subnav text--subnav'>
+          <div class='product-subnav__left medium-screen-up'>
+            <snippet id='product-subnav__links'>
+              <ul>
+                <li>
+                  <a href='#overview-link-anchor'>Overview</a>
+                </li>
+                <li>
+                  <a href='#white-papers-link-anchor'>White Papers</a>
+                </li>
+                <li>
+                  <a href='#features-link-anchor'>Features</a>
+                </li>
+                <li>
+                  <a href='#videos-link-anchor'>Videos</a>
+                </li>
+              </ul>
+            </snippet>
+          </div>
+          <!-- / demo button on right side -->
+          <div class='product-subnav__right'>
+            <snippet id='product-subnav__right__link'>
+              <a class='button button--primary' href='#demo-link-anchor'>
+                Request a Demo
+              </a>
+            </snippet>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- / layer over sticky nav, scrolls away -->
+    <div class='sticky-nav__top-container'>
+      <!-- / large-header -->
+      <!-- / initializes optional parameters -->
+      <!-- header-large -->
+      <header class='header header--large no-bottom-margin'>
+        <div class='container'>
+          <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
+            <ul>
+              <li>
+                <a href='#products'>
+                  Products
+                </a>
+                <ul>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href='#cart'>
+                  Resources
+                </a>
+                <ul>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href='#contact'>
+                  About Us
+                </a>
+                <ul>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                  <li>
+                    <a href='#'>Menu item</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- header__headline -->
+          <div class='header--large__headline'>
+            <h1 class='text--headline text--white'>
+              <snippet id='product-headline__text'>
+                Product Title
+              </snippet>
+            </h1>
+            <h2 class='text--subhead text--white'>
+              <snippet id='product-subhead__text'>
+                Placeholder Reach more candidates in less time with a product description
+              </snippet>
+            </h2>
+          </div>
+          <!-- product image -->
+          <div class='header--large__image large-screen-only'>
+            <snippet id='product-header__image'>
+              <img src="assets/images/placeholder--product-image-0a95efbe-0a95efbe.png" />
+            </snippet>
+          </div>
+        </div>
+      </header>
+      <div class='container text--body' id='overview-link-anchor'>
+        <!-- / displays in page flow -->
+        <nav>
+          <!-- / four links across top -->
+          <div class='product-subnav text--subnav'>
+            <div class='product-subnav__left medium-screen-up'>
+              <snippet id='product-subnav__links'>
+                <ul>
+                  <li>
+                    <a href='#overview-link-anchor'>Overview</a>
+                  </li>
+                  <li>
+                    <a href='#white-papers-link-anchor'>White Papers</a>
+                  </li>
+                  <li>
+                    <a href='#features-link-anchor'>Features</a>
+                  </li>
+                  <li>
+                    <a href='#videos-link-anchor'>Videos</a>
+                  </li>
+                </ul>
+              </snippet>
+            </div>
+            <!-- / demo button on right side -->
+            <div class='product-subnav__right'>
+              <snippet id='product-subnav__right__link'>
+                <a class='button button--primary' href='#demo-link-anchor'>
+                  Request a Demo
+                </a>
+              </snippet>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class='container text--body'>
+      <!-- / overview -->
+      <section class='product-detail box--divider-bottom' id='overview'>
+        <h2 class='product-detail__headline text--headline-2'>
+          <snippet id='product-overview__text'>
+            Overview
+          </snippet>
+        </h2>
+        <div class='product-detail__body'>
+          <snippet id='product-detail__body'>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. Pellentesque commodo metus nec ante ullamcorper, nec vulputate ipsum mattis. Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
+            </p>
+            <p>
+              Ut venenatis rhoncus leo, ultricies rhoncus tellus ornare a. Mauris a velit est. Pellentesque neque elit, sagittis tristique iaculis id, rhoncus nec diam. Nunc laoreet dignissim nisl, eu gravida eros congue ac. Etiam egestas commodo nibh molestie lacinia.
+            </p>
+            <p>
+              Vestibulum lobortis leo sit amet diam pretium mattis. Duis congue id nibh eget laoreet. Etiam tincidunt tellus magna, vitae finibus justo pharetra sit amet. Pellentesque faucibus arcu eu sagittis condimentum. Donec hendrerit venenatis massa sit amet elementum. Vivamus vehicula vel neque eu convallis.
+            </p>
+          </snippet>
+          <span id='white-papers-link-anchor'></span>
+        </div>
+      </section>
+      <!-- / white papers -->
+      <section class='product-detail box--divider-bottom' id='white-papers'>
+        <h2 class='product-detail__headline text--headline-2'>
+          <snippet id='product-white-papers__text'>
+            White Papers
+          </snippet>
+        </h2>
+        <div class='product-detail__body text--link-list'>
+          <snippet id='product-white-papers__list'>
+            <ul>
+              <li class='alpha'>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+                </a>
+              </li>
+              <li>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+                </a>
+              </li>
+              <li class='omega'>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
+                  <span id='features-link-anchor'></span>
+                </a>
+              </li>
+            </ul>
+          </snippet>
+        </div>
+      </section>
+      <!-- / features -->
+      <section class='product-detail box--divider-bottom'>
+        <h2 class='product-detail__headline text--headline-2'>
+          <snippet id='product-features__text'>
+            Features
+          </snippet>
+        </h2>
+        <div class='product-detail__body'></div>
+        <!-- / features - desktop -->
+        <div>
+          <div class='feature-block'>
+            <snippet id='product-feature-block1__image'>
+              <img src="assets/images/placeholder-circle-1-d5a50796-d5a50796.png" />
+            </snippet>
+            <snippet id='product-feature-block1__body'>
+              <h4>True Grit</h4>
+              <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
+              <a class='button button--secondary' href='1'>Learn More</a>
+            </snippet>
+          </div>
+          <div class='feature-block'>
+            <snippet id='product-feature-block2__image'>
+              <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
+            </snippet>
+            <snippet id='product-feature-block2__body'>
+              <h4>Makes Own Gravy</h4>
+              <p class='text--grey text--details'>Nuuuuuuuuuuuunc laoreet dignissim nisl.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+            </snippet>
+          </div>
+          <div class='feature-block'>
+            <snippet id='product-feature-block3__image'>
+              <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
+            </snippet>
+            <snippet id='product-feature-block3__body'>
+              <h4>Suddenly, 20% More Cowbell</h4>
+              <p class='text--grey text--details'>Nunc laoreet dig lorem lorem lorem nissim nisl.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+            </snippet>
+          </div>
+          <div class='feature-block'>
+            <snippet id='product-feature-block4__image'>
+              <img src="assets/images/placeholder-circle-3-16ab45f5-16ab45f5.png" />
+            </snippet>
+            <snippet id='product-feature-block4__body'>
+              <h4>Updog</h4>
+              <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+              <span id='videos-link-anchor'></span>
+            </snippet>
+          </div>
+        </div>
+      </section>
+      <!-- / videos -->
+      <section class='product-detail box--divider-bottom' id='videos'>
+        <h2 class='product-detail__headline text--headline-2'>
+          <snippet id='product-videos__text'>
+            Videos
+          </snippet>
+        </h2>
+        <div class='product-detail__body'>
+          <div class='product-detail__video-block'>
+            <!-- / VIDEO THUMBNAIL SHOULD BE 240px WIDE, HEIGHT CAN VARY -->
+            <img src="assets/images/placeholder-video-4d02de9f-4d02de9f.png" />
+            <h4>Video Title About How To Get More Cowbell</h4>
+          </div>
+          <div class='product-detail__video-block'>
+            <img src="assets/images/placeholder-video-4d02de9f-4d02de9f.png" />
+            <h4>Updog Video</h4>
+          </div>
+          <div class='product-detail__video-block'>
+            <img src="assets/images/placeholder-video-4d02de9f-4d02de9f.png" />
+            <h4>Video Title About 50% Higher Conversion with More Cowbell</h4>
+            <span id='demo-link-anchor'></span>
+          </div>
+        </div>
+      </section>
+      <!-- / request a demo -->
+      <section class='product-detail' id='demo'>
+        <h2 class='product-detail__headline text--headline-2'>
+          <snippet id='product-demo__text'>
+            Request a Demo
+          </snippet>
+        </h2>
+        <div class='product-detail__body'>
+          <form class='form--large request-demo'>
+            <!-- / Use div to indicate new row. Class "clear-fix" if required. -->
+            <div>
+              <label class='columns-6'>
+                First Name
+                <br>
+                <input type='text'>
+              </label>
+              <label class='columns-6'>
+                Last Name
+                <br>
+                <input type='text'>
+              </label>
+            </div>
+            <div>
+              <label>
+                Company Name
+                <br>
+                <input type='text'>
+              </label>
+            </div>
+            <div>
+              <label class='columns-6'>
+                Email Address
+                <br>
+                <input type='text'>
+              </label>
+              <label class='columns-6'>
+                Phone Number
+                <br>
+                <input type='text'>
+              </label>
+            </div>
+            <div>
+              <label class='columns-12'>
+                Message
+                <span class='text--ghost'>
+                  (optional)
+                </span>
+                <br>
+                <textarea rows='4' style='width: 100%;'></textarea>
+              </label>
+            </div>
+            <div class='columns-4 shift-8 request-demo__submit'>
+              <submit class='button button--primary'>
+                Submit
+              </submit>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <!-- global footer -->
+    <footer class='footer container text--body large-screen-only'>
+      <div class='footer__subnav text--subnav'>
+        <ul>
+          <li>
+            <a href='#subnav'>
+              Help
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Security & Privacy
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Advertise With Us
+            </a>
+          </li>
+          <li>
+            <a href='#subnav'>
+              Partners & Affiliates
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='footer__logo-row'>
+        <div class='footer__logo'>
+          <img src="assets/images/placeholder--footer-logo-92c66024.png" />
+        </div>
+        <div class='footer__share-links footer__subnav text--subnav'>
+          <ul>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-facebook-7ba66a79.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-twitter-21674135.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-linkedin-4bc6b03f.png" />
+              </a>
+            </li>
+            <li>
+              <a href='#share-logo'>
+                <img src="assets/images/icon--social-youtube-74ed5770.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javascripts/site-2a795872.js" type="text/javascript"></script>
+    <script src='https://s3.amazonaws.com/cortex-content-snippets/content-snippets-view.js'></script>
+  </body>
+</html>

@@ -7,27 +7,30 @@
     <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
     <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
     <!-- placeholder -->
-    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Home Page | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-dfb27e61.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-9506f66f.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
+    <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
+    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
   </head>
-  <body class='home-page base-background'>
+  <body class='home-page employer-scope'>
     <div class='modal__background hidden' id='modal-background'></div>
-    <header class='top-bar' id='top-bar'>
+    <header class='top-bar top-bar--white' id='top-bar'>
       <div class='top-bar__logo'>
         <a href='/'>
           <!-- / low-fi image of logo for positioning, needs to be updated -->
           <img src='assets/images/placeholder-logo-e2d254a1.png'>
         </a>
       </div>
-      <nav class='flyout top-bar__links text--white text--top-bar-link medium-screen-up'>
+      <nav class='flyout top-bar__links text--top-bar-link medium-screen-up'>
         <ul>
           <li>
             <a href='#account'>
-              <img src='assets/images/icon--account-8b7208ff.png'>
+              <i class="fa fa-user fa-lg"></i>
               My Account
             </a>
             <ul>
@@ -44,7 +47,7 @@
           </li>
           <li>
             <a href='#cart'>
-              <img src='assets/images/icon--cart-69058b39.png'>
+              <i class="fa fa-shopping-cart fa-lg"></i>
               $1337.00 Cart
             </a>
           </li>
@@ -100,60 +103,492 @@
     <!-- header--home -->
     <header class='header header--home'>
       <div class='container'>
-        <nav class='header__subnav text--white text--subnav medium-screen-up'>
+        <nav class='header__subnav text--white text--subnav large-screen-only'>
           <div class='columns-6'>
-            <ul>
-              <li>
-                <a href='#products'>
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href='#cart'>
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a href='#contact'>
-                  About Us
-                </a>
-              </li>
-            </ul>
+            <nav class='flyout header__subnav text--white text--subnav medium-screen-up'>
+              <ul>
+                <li>
+                  <a href='#products'>
+                    Products
+                  </a>
+                  <ul>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href='#cart'>
+                    Resources
+                  </a>
+                  <ul>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href='#contact'>
+                    About Us
+                  </a>
+                  <ul>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                    <li>
+                      <a href='#'>Menu item</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class='columns-2 shift-1 header--home__top-nav'>
-            <a class='button button--primary button--large button--sucess' href='#foo'>
+          <div class='columns-6 header--home__top-nav'>
+            <a class='button button--tertiary' href='#foo'>
               Post a Job
             </a>
-          </div>
-          <div class='columns-3 header--home__top-nav'>
-            <a class='button button--primary button--large' href='#bar'>
+            <a class='button button--primary' href='#bar'>
               Search Candidates
             </a>
           </div>
         </nav>
         <!-- header__headline -->
-        <div class='header--home__headline'>
-          <h1 class='text--headline text--white'>
-            A CareerBuilder Product
-          </h1>
-          <h2 class='text--subhead text--white'>
-            Find the right business solutions for your company
-          </h2>
-          <a class='header--home__button button button--secondary button--large text--white'>
-            Learn More
-          </a>
+        <div class='carousel__placeholder carousel__placeholder--headline'>
+          <div class='carousel__grouping carousel__grouping--headline'>
+            <div class='carousel__object carousel__object--headline active'>
+              <h1 class='text--headline text--white'>
+                Kiss Your Tedious Recruitment Process Goodbye
+              </h1>
+              <h2 class='text--subhead text--white'>
+                Go from acquire to hire with Talent Stream Technologies, CareerBuilder’s recruitment sofware solution that brings advertising, data and technology into one pre-hire platform.
+              </h2>
+              <a class='header--home__button button button--secondary text--white'>
+                Learn More
+              </a>
+            </div>
+            <div class='carousel__object carousel__object--headline hidden'>
+              <h1 class='text--headline text--white'>
+                Second Headline
+              </h1>
+              <h2 class='text--subhead text--white'>
+                Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+              </h2>
+              <a class='header--home__button button button--secondary text--white'>
+                Learn More
+              </a>
+            </div>
+            <div class='carousel__object carousel__object--headline hidden'>
+              <h1 class='text--headline text--white'>
+                Third Headline
+              </h1>
+              <h2 class='text--subhead text--white'>
+                Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+              </h2>
+              <a class='header--home__button button button--secondary text--white'>
+                Learn More
+              </a>
+            </div>
+            <div class='carousel__object carousel__object--headline hidden'>
+              <h1 class='text--headline text--white'>
+                Fourth Headline
+              </h1>
+              <h2 class='text--subhead text--white'>
+                Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+              </h2>
+              <a class='header--home__button button button--secondary text--white'>
+                Learn More
+              </a>
+            </div>
+            <div class='carousel__object carousel__object--headline hidden'>
+              <h1 class='text--headline text--white'>
+                Fifth Headline
+              </h1>
+              <h2 class='text--subhead text--white'>
+                Fusce vel dui. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Ut leo.
+              </h2>
+              <a class='header--home__button button button--secondary text--white'>
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- background video -->
+      <div id='background-video-wrapper'>
+        <!-- background-video loads conditionally, see site.js -->
       </div>
     </header>
     <!-- product image -->
-    <div class='carosel--container large-screen-only'>
-      <div class='carosel--frame-image'>
-        <img src="assets/images/carosel--laptop-cce908f6.png" />
+    <aside class='carousel__container large-screen-only home__top-carousel'>
+      <div class='carousel__placeholder carousel__placeholder--screenshot'>
+        <img class="carousel__laptop" src="assets/images/carousel--laptop-cce908f6.png" />
+        <a class='carousel__arrow carousel__arrow--left'>
+          <i class='fa fa-chevron-left'></i>
+        </a>
+        <a class='carousel__arrow carousel__arrow--right'>
+          <i class='fa fa-chevron-right'></i>
+        </a>
+        <div class='carousel__grouping carousel__grouping--screenshot'>
+          <img class="carousel__object carousel__object--screenshot active" src="assets/images/carousel--home-top-1-14d48dfa.png" />
+          <img class="carousel__object carousel__object--screenshot hidden" src="assets/images/carousel--home-top-2-43b26c7f.png" />
+          <img class="carousel__object carousel__object--screenshot hidden" src="assets/images/carousel--home-top-3-252db38a.png" />
+          <img class="carousel__object carousel__object--screenshot hidden" src="assets/images/carousel--home-top-4-dcc97d60.png" />
+          <img class="carousel__object carousel__object--screenshot hidden" src="assets/images/carousel--home-top-5-fc426dc8.png" />
+        </div>
+      </div>
+      <div class='carousel__clickable'>
+        <a class='carousel__dot active' href='#'>
+          <i class='fa fa-circle'></i>
+        </a>
+        <a class='carousel__dot' href='#'>
+          <i class='fa fa-circle'></i>
+        </a>
+        <a class='carousel__dot' href='#'>
+          <i class='fa fa-circle'></i>
+        </a>
+        <a class='carousel__dot' href='#'>
+          <i class='fa fa-circle'></i>
+        </a>
+        <a class='carousel__dot' href='#'>
+          <i class='fa fa-circle'></i>
+        </a>
+      </div>
+    </aside>
+    <!-- / products row -->
+    <section class='container text--body'>
+      <div class='home__product-block'>
+        <h2>Candidate Marketplace</h2>
+        <p>Connecting you to the best candidates through online and offline sourcing channels.</p>
+        <a class='button button--secondary button--small' href='#'>View Products</a>
+      </div>
+      <div class='home__product-block'>
+        <h2>Sourcing Software</h2>
+        <p>Moving candidates from aquire to hire while removing the complexity from your process.</p>
+        <a class='button button--secondary button--small' href='#'>View Products</a>
+      </div>
+      <div class='home__product-block omega'>
+        <h2>Recruitment Analytics</h2>
+        <p>Making recruitment data actionable, helping you set expectations, measure and grow.</p>
+        <a class='button button--secondary button--small' href='#'>View Products</a>
+      </div>
+    </section>
+    <!-- / text box -->
+    <div class='home__background-cover home__icons text--body'>
+      <div class='home__background-overlay-right home__overlay--green'></div>
+      <section class='container text--body home__icons__section'>
+        <div class='home__half-page-right text--white'>
+          <h2>Products and Solutions for Every Step of the Recruiter Journey</h2>
+          <p>Whether you need to post a single job or build a comprehensive recruitment program, we have you covered.</p>
+          <div class='home__icon-row clear-fix'>
+            <img src="assets/images/icon--home-row-1-60cd2e23.png" />
+            <img src="assets/images/icon--home-row-2-2b2fa477.png" />
+            <img src="assets/images/icon--home-row-3-656a049f.png" />
+            <img src="assets/images/icon--home-row-4-0363ee70.png" />
+            <img src="assets/images/icon--home-row-5-0e213e1b.png" />
+          </div>
+          <div class='home__icon-row__subtext clear-fix'>Source &nbsp > &nbsp Engage &nbsp > &nbsp Manage &nbsp > &nbsp Hire &nbsp > &nbsp Measure</div>
+        </div>
+      </section>
+    </div>
+    <!-- / featured customers -->
+    <div class='home__background-cover home__logo-grid__container'>
+      <section class='container text--body home__logo-grid__title'>
+        <div>
+          <span class='light'>Featured</span>
+          <span class='heavy'>Customers</span>
+        </div>
+      </section>
+      <!-- / MEDIUM UP SCREEN VERSION -->
+      <div class='container text--body home__logo-grid large-screen-only'>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-sports"} -->
+          <img src="assets/images/logo--testimonial--sports-a2b1300d.png" />
+        </div>
+        <div>
+          <a class='modal-open--video-wynn' href='#'>
+            <img src="assets/images/logo--testimonial--wynn-fcc1f41c.png" />
+          </a>
+        </div>
+        <div>
+          <a class='modal-open--video-nucor' href='#'>
+            <img src="assets/images/logo--testimonial--nucor-f2a0d427.png" />
+          </a>
+        </div>
+      </div>
+      <div class='container text--body home__logo-grid omega-row large-screen-only'>
+        <div>
+          <a class='modal-open--video-vitamin' href='#'>
+            <img src="assets/images/logo--testimonial--vitamin-7caffcc3.png" />
+          </a>
+        </div>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-rockwater"} -->
+          <img src="assets/images/logo--testimonial--rockwater-e03e859a.png" />
+        </div>
+        <div>
+          <a class='modal-open--video-novo' href='#'>
+            <img src="assets/images/logo--testimonial--novo-f7a755bb.png" />
+          </a>
+        </div>
+      </div>
+      <!-- / SMALL SCREEN VERSION -->
+      <div class='container text--body home__logo-grid medium-screen-down'>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-sports"} -->
+          <img src="assets/images/logo--testimonial--sports-a2b1300d.png" />
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/PVJ8XE3_5QM'>
+            <img src="assets/images/logo--testimonial--wynn-fcc1f41c.png" />
+          </a>
+        </div>
+      </div>
+      <div class='container text--body home__logo-grid medium-screen-down'>
+        <div>
+          <a href='https://www.youtube.com/embed/1adyGfKj-tM'>
+            <img src="assets/images/logo--testimonial--nucor-f2a0d427.png" />
+          </a>
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/VML7WlBLTiU'>
+            <img src="assets/images/logo--testimonial--vitamin-7caffcc3.png" />
+          </a>
+        </div>
+      </div>
+      <div class='container text--body home__logo-grid omega-row medium-screen-down'>
+        <div>
+          <!-- %a{href:"#", class: "modal-open--video-rockwater"} -->
+          <img src="assets/images/logo--testimonial--rockwater-e03e859a.png" />
+        </div>
+        <div>
+          <a href='https://www.youtube.com/embed/z017dY3KAlM'>
+            <img src="assets/images/logo--testimonial--novo-f7a755bb.png" />
+          </a>
+        </div>
       </div>
     </div>
+    <!-- / lower carousel -->
+    <div class='home__background-cover home__stories'>
+      <div class='home__background-overlay-all home__overlay--blue'></div>
+      <section class='container text--body text--white'>
+        <div class='carousel__placeholder carousel__placeholder--stories'></div>
+        <div class='carousel__grouping carousel__grouping--stories'>
+          <div class='carousel__object carousel__object--stories active'>
+            <h2>
+              <span class='light'>Customer</span>
+              <span class='heavy'>Success Stories</span>
+            </h2>
+            <p>
+              “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+            </p>
+            <a class='button button--secondary text--white' href='#'>More Stories</a>
+          </div>
+          <div class='carousel__object carousel__object--stories hidden'>
+            <h2>
+              <span class='light'>Employer</span>
+              <span class='heavy'>Success Stories</span>
+            </h2>
+            <p>
+              “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+            </p>
+            <a class='button button--secondary text--white' href='#'>More Stories</a>
+          </div>
+          <div class='carousel__object carousel__object--stories hidden'>
+            <h2>
+              <span class='light'>Personal</span>
+              <span class='heavy'>Success Stories</span>
+            </h2>
+            <p>
+              “Supply & Demand allows us to present data that is current, live data and say ‘this is what the trend is and this is where it is going.”
+            </p>
+            <a class='button button--secondary text--white' href='#'>More Stories</a>
+          </div>
+        </div>
+        <div class='carousel__clickable large-screen-only'>
+          <a class='carousel__dot active' href='#'>
+            <i class='fa fa-circle'></i>
+          </a>
+          <a class='carousel__dot' href='#'>
+            <i class='fa fa-circle'></i>
+          </a>
+          <a class='carousel__dot' href='#'>
+            <i class='fa fa-circle'></i>
+          </a>
+        </div>
+      </section>
+    </div>
     <div class='container text--body'>
-      <div class='columns-12'>
-        WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS! WORK IN PROGRESS!
+      <section class='home__blog'>
+        <h2>
+          <span class='light'>Recent</span>
+          <span class='heavy'>Blog Articles</span>
+        </h2>
+        <article class='home__blog__article'>
+          <h3>
+            <a href='#'>46% of Employers Plan to Hire Temporary or Contract Workers in 2015</a>
+          </h3>
+          <time>March 28, 2015</time>
+        </article>
+        <article class='home__blog__article'>
+          <h3>
+            <a href='#'>10 Metros With a Temp Workforce of 45-150% Larger Than the US Average</a>
+          </h3>
+          <time>March 28, 2015</time>
+        </article>
+        <article class='home__blog__article'>
+          <h3>
+            <a href='#'>Senior Management More Susceptible to March Madness</a>
+          </h3>
+          <time>March 28, 2015</time>
+        </article>
+        <a class='button button--secondary' href='#'>Visit Blog</a>
+      </section>
+      <section class='home__events'>
+        <h2>
+          <span class='light'>Upcoming</span>
+          <span class='heavy'>Events</span>
+        </h2>
+        <div class='home__events__item'>
+          <h3>
+            <a href='#'>Empower 2015: Register Today!</a>
+          </h3>
+          <time>March, 10 - 13, 2015</time>
+        </div>
+        <div class='home__events__item'>
+          <h3>
+            <a href='#'>NJSA National Executive Leadership Conference</a>
+          </h3>
+          <time>March, 10 - 13, 2015</time>
+        </div>
+        <div class='home__events__item'>
+          <h3>
+            <a href='#'>Techserve Annual Conference</a>
+          </h3>
+          <time>March, 10 - 13, 2015</time>
+        </div>
+        <div class='home__events__item'>
+          <h3>
+            <a href='#'>NYSA Super Seminar Day</a>
+          </h3>
+          <time>March, 10 - 13, 2015</time>
+        </div>
+        <a class='button button--secondary' href='#'>More Events</a>
+      </section>
+    </div>
+    <!-- modals -->
+    <div class='modal__positioning hidden'>
+      <div class='modal__container text--body'>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-sports'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Sports Authority</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/VML7WlBLTiU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-wynn'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Wynn Resorts</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/PVJ8XE3_5QM?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-nucor'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Nucor</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/1adyGfKj-tM?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-vitamin'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Vitamin Water</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/VML7WlBLTiU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-rockwater'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Rockwater Energy Solutions</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/VML7WlBLTiU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
+        <div class='modal__box box--pop-out hidden modal--video' id='modal--video-novo'>
+          <div class='modal__close-button'>
+            <a class='close-modal' href='javascript:void(0)'>
+              <span class='text--x-button'>X</span>
+            </a>
+          </div>
+          <h2 class='text--headline-2 text--accent alpha'>
+            <span class='light'>Featured Customer:</span>
+            <span class='heavy'>Novo Group</span>
+            <iframe id="video" width="100%" height="497" src="https://www.youtube.com/embed/z017dY3KAlM?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <!-- / video embed here -->
+          </h2>
+          <submit class='button button--primary close-modal'>
+            Close
+          </submit>
+        </div>
       </div>
     </div>
     <!-- global footer -->
@@ -217,6 +652,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-2a795872.js" type="text/javascript"></script>
   </body>
 </html>

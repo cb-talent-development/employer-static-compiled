@@ -7,14 +7,17 @@
     <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
     <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
     <!-- placeholder -->
-    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Product Page | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-dfb27e61.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-9506f66f.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
+    <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
+    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
   </head>
-  <body class='product-page base-background'>
+  <body class='product-page employer-scope'>
     <div class='modal__background hidden' id='modal-background'></div>
     <header class='top-bar' id='top-bar'>
       <div class='top-bar__logo'>
@@ -103,26 +106,30 @@
         <!-- / four links across top -->
         <div class='product-subnav text--subnav'>
           <div class='product-subnav__left medium-screen-up'>
-            <ul>
-              <li>
-                <a href='#overview-link-anchor'>Overview</a>
-              </li>
-              <li>
-                <a href='#white-papers-link-anchor'>White Papers</a>
-              </li>
-              <li>
-                <a href='#features-link-anchor'>Features</a>
-              </li>
-              <li>
-                <a href='#videos-link-anchor'>Videos</a>
-              </li>
-            </ul>
+            <snippet id='product-subnav__links'>
+              <ul>
+                <li>
+                  <a href='#overview-link-anchor'>Overview</a>
+                </li>
+                <li>
+                  <a href='#white-papers-link-anchor'>White Papers</a>
+                </li>
+                <li>
+                  <a href='#features-link-anchor'>Features</a>
+                </li>
+                <li>
+                  <a href='#videos-link-anchor'>Videos</a>
+                </li>
+              </ul>
+            </snippet>
           </div>
           <!-- / demo button on right side -->
           <div class='product-subnav__right'>
-            <a class='button button--primary' href='#demo-link-anchor'>
-              Request a Demo
-            </a>
+            <snippet id='product-subnav__right__link'>
+              <a class='button button--primary' href='#demo-link-anchor'>
+                Request a Demo
+              </a>
+            </snippet>
           </div>
         </div>
       </nav>
@@ -189,15 +196,21 @@
           <!-- header__headline -->
           <div class='header--large__headline'>
             <h1 class='text--headline text--white'>
-              Product Title
+              <snippet id='product-headline__text'>
+                Product Title
+              </snippet>
             </h1>
             <h2 class='text--subhead text--white'>
-              Placeholder Reach more candidates in less time with a product description
+              <snippet id='product-subhead__text'>
+                Placeholder Reach more candidates in less time with a product description
+              </snippet>
             </h2>
           </div>
           <!-- product image -->
           <div class='header--large__image large-screen-only'>
-            <img src="assets/images/placeholder--product-image-0a95efbe-0a95efbe.png" />
+            <snippet id='product-header__image'>
+              <img src="assets/images/placeholder--product-image-0a95efbe-0a95efbe.png" />
+            </snippet>
           </div>
         </div>
       </header>
@@ -207,26 +220,30 @@
           <!-- / four links across top -->
           <div class='product-subnav text--subnav'>
             <div class='product-subnav__left medium-screen-up'>
-              <ul>
-                <li>
-                  <a href='#overview-link-anchor'>Overview</a>
-                </li>
-                <li>
-                  <a href='#white-papers-link-anchor'>White Papers</a>
-                </li>
-                <li>
-                  <a href='#features-link-anchor'>Features</a>
-                </li>
-                <li>
-                  <a href='#videos-link-anchor'>Videos</a>
-                </li>
-              </ul>
+              <snippet id='product-subnav__links'>
+                <ul>
+                  <li>
+                    <a href='#overview-link-anchor'>Overview</a>
+                  </li>
+                  <li>
+                    <a href='#white-papers-link-anchor'>White Papers</a>
+                  </li>
+                  <li>
+                    <a href='#features-link-anchor'>Features</a>
+                  </li>
+                  <li>
+                    <a href='#videos-link-anchor'>Videos</a>
+                  </li>
+                </ul>
+              </snippet>
             </div>
             <!-- / demo button on right side -->
             <div class='product-subnav__right'>
-              <a class='button button--primary' href='#demo-link-anchor'>
-                Request a Demo
-              </a>
+              <snippet id='product-subnav__right__link'>
+                <a class='button button--primary' href='#demo-link-anchor'>
+                  Request a Demo
+                </a>
+              </snippet>
             </div>
           </div>
         </nav>
@@ -236,89 +253,117 @@
       <!-- / overview -->
       <section class='product-detail box--divider-bottom' id='overview'>
         <h2 class='product-detail__headline text--headline-2'>
-          Overview
+          <snippet id='product-overview__text'>
+            Overview
+          </snippet>
         </h2>
         <div class='product-detail__body'>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. Pellentesque commodo metus nec ante ullamcorper, nec vulputate ipsum mattis. Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
-          </p>
-          <p>
-            Ut venenatis rhoncus leo, ultricies rhoncus tellus ornare a. Mauris a velit est. Pellentesque neque elit, sagittis tristique iaculis id, rhoncus nec diam. Nunc laoreet dignissim nisl, eu gravida eros congue ac. Etiam egestas commodo nibh molestie lacinia.
-          </p>
-          <p>
-            Vestibulum lobortis leo sit amet diam pretium mattis. Duis congue id nibh eget laoreet. Etiam tincidunt tellus magna, vitae finibus justo pharetra sit amet. Pellentesque faucibus arcu eu sagittis condimentum. Donec hendrerit venenatis massa sit amet elementum. Vivamus vehicula vel neque eu convallis.
-          </p>
+          <snippet id='product-detail__body'>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ante sem, at dictum nibh imperdiet ut. Sed a elit at justo pulvinar molestie. Pellentesque commodo metus nec ante ullamcorper, nec vulputate ipsum mattis. Phasellus pellentesque et dui sed accumsan. Morbi accumsan consequat pellentesque. Integer venenatis commodo orci id varius. Vestibulum tempus luctus diam, eget sollicitudin dui cursus quis. Sed sed vestibulum ipsum. Curabitur vitae arcu libero.
+            </p>
+            <p>
+              Ut venenatis rhoncus leo, ultricies rhoncus tellus ornare a. Mauris a velit est. Pellentesque neque elit, sagittis tristique iaculis id, rhoncus nec diam. Nunc laoreet dignissim nisl, eu gravida eros congue ac. Etiam egestas commodo nibh molestie lacinia.
+            </p>
+            <p>
+              Vestibulum lobortis leo sit amet diam pretium mattis. Duis congue id nibh eget laoreet. Etiam tincidunt tellus magna, vitae finibus justo pharetra sit amet. Pellentesque faucibus arcu eu sagittis condimentum. Donec hendrerit venenatis massa sit amet elementum. Vivamus vehicula vel neque eu convallis.
+            </p>
+          </snippet>
           <span id='white-papers-link-anchor'></span>
         </div>
       </section>
       <!-- / white papers -->
       <section class='product-detail box--divider-bottom' id='white-papers'>
         <h2 class='product-detail__headline text--headline-2'>
-          White Papers
+          <snippet id='product-white-papers__text'>
+            White Papers
+          </snippet>
         </h2>
         <div class='product-detail__body text--link-list'>
-          <ul>
-            <li class='alpha'>
-              <a href='#white-paper'>
-                <div class='text--link-list__arrow product-detail__arrow'>></div>
-                Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
-              </a>
-            </li>
-            <li>
-              <a href='#white-paper'>
-                <div class='text--link-list__arrow product-detail__arrow'>></div>
-                Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
-              </a>
-            </li>
-            <li class='omega'>
-              <a href='#white-paper'>
-                <div class='text--link-list__arrow product-detail__arrow'>></div>
-                Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
-                <span id='features-link-anchor'></span>
-              </a>
-            </li>
-          </ul>
+          <snippet id='product-white-papers__list'>
+            <ul>
+              <li class='alpha'>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Nunc laoreet dignissim nisl, eu gravida eros congue ac, and you won't believe what happens next.
+                </a>
+              </li>
+              <li>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Ut venenatis rhoncus leo, ultricies rhoncus tellus using this one weird trick.
+                </a>
+              </li>
+              <li class='omega'>
+                <a href='#white-paper'>
+                  <div class='text--link-list__arrow product-detail__arrow'>></div>
+                  Pellentesque faucibus arcu eu sagittis condimentum, conveniently unnamed sources say.
+                  <span id='features-link-anchor'></span>
+                </a>
+              </li>
+            </ul>
+          </snippet>
         </div>
       </section>
       <!-- / features -->
       <section class='product-detail box--divider-bottom'>
         <h2 class='product-detail__headline text--headline-2'>
-          Features
+          <snippet id='product-features__text'>
+            Features
+          </snippet>
         </h2>
         <div class='product-detail__body'></div>
         <!-- / features - desktop -->
         <div>
           <div class='feature-block'>
-            <img src="assets/images/placeholder-circle-1-d5a50796-d5a50796.png" />
-            <h4>True Grit</h4>
-            <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
-            <a class='button button--secondary' href='1'>Learn More</a>
+            <snippet id='product-feature-block1__image'>
+              <img src="assets/images/placeholder-circle-1-d5a50796-d5a50796.png" />
+            </snippet>
+            <snippet id='product-feature-block1__body'>
+              <h4>True Grit</h4>
+              <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
+              <a class='button button--secondary' href='1'>Learn More</a>
+            </snippet>
           </div>
           <div class='feature-block'>
-            <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
-            <h4>Makes Own Gravy</h4>
-            <p class='text--grey text--details'>Nuuuuuuuuuuuunc laoreet dignissim nisl.</p>
-            <a class='button button--secondary' href='2'>Learn More</a>
+            <snippet id='product-feature-block2__image'>
+              <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
+            </snippet>
+            <snippet id='product-feature-block2__body'>
+              <h4>Makes Own Gravy</h4>
+              <p class='text--grey text--details'>Nuuuuuuuuuuuunc laoreet dignissim nisl.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+            </snippet>
           </div>
           <div class='feature-block'>
-            <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
-            <h4>Suddenly, 20% More Cowbell</h4>
-            <p class='text--grey text--details'>Nunc laoreet dig lorem lorem lorem nissim nisl.</p>
-            <a class='button button--secondary' href='2'>Learn More</a>
+            <snippet id='product-feature-block3__image'>
+              <img src="assets/images/placeholder-circle-2-03bdd057-03bdd057.png" />
+            </snippet>
+            <snippet id='product-feature-block3__body'>
+              <h4>Suddenly, 20% More Cowbell</h4>
+              <p class='text--grey text--details'>Nunc laoreet dig lorem lorem lorem nissim nisl.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+            </snippet>
           </div>
           <div class='feature-block'>
-            <img src="assets/images/placeholder-circle-3-16ab45f5-16ab45f5.png" />
-            <h4>Updog</h4>
-            <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
-            <a class='button button--secondary' href='2'>Learn More</a>
-            <span id='videos-link-anchor'></span>
+            <snippet id='product-feature-block4__image'>
+              <img src="assets/images/placeholder-circle-3-16ab45f5-16ab45f5.png" />
+            </snippet>
+            <snippet id='product-feature-block4__body'>
+              <h4>Updog</h4>
+              <p class='text--grey text--details'>Nunc laoreet dignissim nisl, eu gravida eros congue ac.</p>
+              <a class='button button--secondary' href='2'>Learn More</a>
+              <span id='videos-link-anchor'></span>
+            </snippet>
           </div>
         </div>
       </section>
       <!-- / videos -->
       <section class='product-detail box--divider-bottom' id='videos'>
         <h2 class='product-detail__headline text--headline-2'>
-          Videos
+          <snippet id='product-videos__text'>
+            Videos
+          </snippet>
         </h2>
         <div class='product-detail__body'>
           <div class='product-detail__video-block'>
@@ -340,7 +385,9 @@
       <!-- / request a demo -->
       <section class='product-detail' id='demo'>
         <h2 class='product-detail__headline text--headline-2'>
-          Request a Demo
+          <snippet id='product-demo__text'>
+            Request a Demo
+          </snippet>
         </h2>
         <div class='product-detail__body'>
           <form class='form--large request-demo'>
@@ -456,6 +503,7 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-2a795872.js" type="text/javascript"></script>
+    <script src='https://s3.amazonaws.com/cortex-content-snippets/content-snippets-view.js'></script>
   </body>
 </html>

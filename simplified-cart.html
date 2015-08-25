@@ -7,14 +7,17 @@
     <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0' name='viewport'>
     <!-- TEMPORARY LOAD OF JQUERY 1.9 -- USE ASSET PIPELINE IN FINAL DEPLOY -->
     <!-- placeholder -->
-    <script src='http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
+    <script src='//img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js' type='text/javascript'></script>
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Your Cart | CareerBuilder</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="assets/stylesheets/site-dfb27e61.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="assets/stylesheets/site-9506f66f.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- Loads selectivizer for IE8 to corrct grid incompatabilities. Must be loaded *after* jquery! -->
+    <!--[if lte IE 8]><script src="assets/javascripts/ie8-49a9e3dc.js" type="text/javascript"></script>
+    <link href="assets/stylesheets/ie8-acae019a.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
   </head>
-  <body class='simplified-cart base-background'>
+  <body class='simplified-cart employer-scope'>
     <div class='modal__background hidden' id='modal-background'></div>
     <header class='top-bar' id='top-bar'>
       <div class='top-bar__logo'>
@@ -316,7 +319,7 @@
         <div class='cart__row box--divider-bottom'>
           <div class='cart__cell cart--simplified__cell--title'>
             <!-- ITEM TITLE -->
-            ut at commodi blanditiis incidunt culpa qui qui officiis aut exercitationem aut nemo est sit
+            similique molestias eveniet nulla rerum consectetur alias sapiente dolores possimus consequatur molestiae est quae suscipit
             <!-- ITEM QUANTITY -->
             (&nbsp;2&nbsp;)
           </div>
@@ -534,6 +537,7 @@
         </div>
       </div>
     </footer>
-    <script src="assets/javascripts/site-347fd455.js" type="text/javascript"></script>
+    <script src="assets/javascripts/site-2a795872.js" type="text/javascript"></script>
+    <script src='https://s3.amazonaws.com/cortex-content-snippets/content-snippets-view.js'></script>
   </body>
 </html>
